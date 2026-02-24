@@ -1,0 +1,55 @@
+---
+// Este componente es la barra de navegación
+---
+
+<nav>
+    <a href="/">Home</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 2.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+    }
+  
+    a {
+      text-decoration: none;
+      color: var(--negro);
+      font-size: 1.6rem;
+      font-family: 'DM Serif Display', serif;
+      transition: all 0.3s;
+      position: relative;
+      display: inline-block;
+    }
+  
+    /* Línea que crece abajo al hover */
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--amarillo);
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+  
+    a:hover::after {
+      width: 100%;
+    }
+  
+    /* El texto se inclina y agranda */
+    a:hover {
+      font-style: italic;
+      transform: scale(1.1);
+    }
+  </style>
