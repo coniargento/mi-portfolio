@@ -1,0 +1,436 @@
+---
+// Página Sobre mí — línea de tiempo con carrusel
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre mí — Coni Argento">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="vol">VOL. 01 — MI HISTORIA</div>
+    <h2 class="titulo">MI CAMINO</h2>
+    <p class="subtitulo">De dónde vengo y a dónde voy</p>
+  </div>
+
+  <!-- LÍNEA DE TIEMPO -->
+  <div class="timeline">
+
+    <!-- ITEM 1 — carrusel izquierda, texto derecha -->
+    <div class="tl-item">
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🌱</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">✨</span><span>Foto 2</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🌸</span><span>Foto 3</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-texto">
+        <div class="tl-anio">2003</div>
+        <div class="tl-label">EL COMIENZO</div>
+        <div class="tl-titulo">Todo empieza acá</div>
+        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+      </div>
+    </div>
+
+    <!-- ITEM 2 — texto izquierda, carrusel derecha -->
+    <div class="tl-item">
+      <div class="tl-lado-texto">
+        <div class="tl-anio">2016-2020</div>
+        <div class="tl-label">SECUNDARIO</div>
+        <div class="tl-titulo">EN ARTES VISUALES</div>
+        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🎨</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💻</span><span>Foto 2</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3 — carrusel izquierda, texto derecha -->
+    <div class="tl-item">
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">📚</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🏫</span><span>Foto 2</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💡</span><span>Foto 3</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-texto">
+        <div class="tl-anio">2021-2026</div>
+        <div class="tl-label">UNIVERSIDAD MAIMONIDES</div>
+        <div class="tl-titulo">Licenciatura en tecnología Multimedial</div>
+        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+      </div>
+    </div>
+
+    <!-- ITEM 4 — texto izquierda, carrusel derecha -->
+    <div class="tl-item">
+      <div class="tl-lado-texto">
+        <div class="tl-anio">2022-2024</div>
+        <div class="tl-label">FREELANCER EN REDES Y DISEÑO</div>
+        <div class="tl-titulo">Nace mi agencia creativa</div>
+        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🚀</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💼</span><span>Foto 2</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 5 — texto izquierda, carrusel derecha -->
+    <div class="tl-item">
+        <div class="tl-lado-texto">
+          <div class="tl-anio">2023</div>
+          <div class="tl-label">MARCA DE ROPA DEPORTIVA</div>
+          <div class="tl-titulo">Nace mi agencia creativa</div>
+          <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        </div>
+        <div class="tl-punto"><div class="tl-circulo"></div></div>
+        <div class="tl-lado-foto">
+          <div class="tl-carrusel" data-actual="0">
+            <div class="tl-slides-wrap">
+              <div class="tl-slides">
+                <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🚀</span><span>Foto 1</span></div></div>
+                <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💼</span><span>Foto 2</span></div></div>
+              </div>
+            </div>
+            <div class="tl-controles">
+              <button class="tl-btn" onclick="mover(this,-1)">←</button>
+              <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div></div>
+              <button class="tl-btn" onclick="mover(this,1)">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 6 — texto izquierda, carrusel derecha -->
+    <div class="tl-item">
+        <div class="tl-lado-texto">
+          <div class="tl-anio">2025</div>
+          <div class="tl-label">MI AGENCIA CREATIVA</div>
+          <div class="tl-titulo">Nace mi agencia creativa</div>
+          <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        </div>
+        <div class="tl-punto"><div class="tl-circulo"></div></div>
+        <div class="tl-lado-foto">
+          <div class="tl-carrusel" data-actual="0">
+            <div class="tl-slides-wrap">
+              <div class="tl-slides">
+                <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🚀</span><span>Foto 1</span></div></div>
+                <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💼</span><span>Foto 2</span></div></div>
+              </div>
+            </div>
+            <div class="tl-controles">
+              <button class="tl-btn" onclick="mover(this,-1)">←</button>
+              <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div></div>
+              <button class="tl-btn" onclick="mover(this,1)">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ITEM 7 — carrusel izquierda, texto derecha -->
+    <div class="tl-item">
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🌟</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🎯</span><span>Foto 2</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-texto">
+        <div class="tl-anio">HOY</div>
+        <div class="tl-label">EL FUTURO</div>
+        <div class="tl-titulo">A dónde voy</div>
+        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+      </div>
+    </div>
+
+  </div>
+
+</Layout>
+
+<style>
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding: 5rem 3rem 3rem;
+  }
+
+  .vol {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .titulo {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitulo {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  /* LÍNEA DE TIEMPO */
+  .timeline {
+    position: relative;
+    padding: 4rem 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Línea vertical central */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--negro);
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+
+  /* Cada item */
+  .tl-item {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .tl-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Impares: carrusel izquierda, texto derecha */
+  .tl-item:nth-child(odd) .tl-lado-foto  { order: 1; display: flex; justify-content: flex-end; padding-right: 2rem; }
+  .tl-item:nth-child(odd) .tl-punto      { order: 2; }
+  .tl-item:nth-child(odd) .tl-lado-texto { order: 3; padding-left: 2rem; }
+
+  /* Pares: texto izquierda, carrusel derecha */
+  .tl-item:nth-child(even) .tl-lado-texto { order: 1; padding-right: 2rem; display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+  .tl-item:nth-child(even) .tl-punto      { order: 2; }
+  .tl-item:nth-child(even) .tl-lado-foto  { order: 3; display: flex; justify-content: flex-start; padding-left: 2rem; }
+
+  /* Punto central */
+  .tl-punto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8px;
+  }
+
+  .tl-circulo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--amarillo);
+    border: 3px solid var(--negro);
+    transition: transform 0.3s;
+  }
+
+  .tl-item:hover .tl-circulo { transform: scale(1.5); }
+
+  /* CARRUSEL */
+  .tl-carrusel { width: 280px; flex-shrink: 0; }
+
+  .tl-slides-wrap {
+    overflow: hidden;
+    border: 2px solid var(--negro);
+    aspect-ratio: 4/3;
+  }
+
+  .tl-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  .tl-slide { min-width: 100%; height: 100%; }
+
+  .tl-slide-ph {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .emoji { font-size: 2rem; }
+
+  .tl-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+  }
+
+  .tl-slide img:hover { filter: grayscale(0%); }
+
+  /* Controles */
+  .tl-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .tl-btn {
+    background: transparent;
+    border: 1.5px solid var(--negro);
+    color: var(--negro);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .tl-btn:hover { background: var(--negro); color: var(--bg); }
+
+  .tl-dots { display: flex; gap: 0.4rem; }
+
+  .tl-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--negro);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .tl-dot.activo { background: var(--amarillo); }
+
+  /* TEXTO */
+  .tl-lado-texto { padding-top: 0.3rem; }
+
+  .tl-anio {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    opacity: 0.2;
+  }
+
+  .tl-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    color: var(--amarillo);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  .tl-titulo {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-top: 0.3rem;
+  }
+
+  .tl-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    max-width: 260px;
+  }
+</style>
+
+<script>
+  // Animación al hacer scroll — aparece cuando entra en pantalla
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.tl-item').forEach(i => observer.observe(i));
+
+  // Mueve el carrusel al hacer clic en las flechas
+  function mover(btn, dir) {
+    const carrusel = btn.closest('.tl-carrusel');
+    const slides   = carrusel.querySelector('.tl-slides');
+    const dots     = carrusel.querySelectorAll('.tl-dot');
+    const total    = carrusel.querySelectorAll('.tl-slide').length;
+    let actual = (parseInt(carrusel.dataset.actual) + dir + total) % total;
+    carrusel.dataset.actual = actual;
+    slides.style.transform = `translateX(-${actual * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('activo', i === actual));
+  }
+</script>
