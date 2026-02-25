@@ -135,6 +135,13 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.3rem;
     color: #333;
     text-align: left;
+    opacity: 0;
+    animation: aparecerTexto 0.8s ease 1.8s forwards;
+  }
+
+  @keyframes aparecerTexto {
+    from { opacity: 0; transform: translateX(-50%) rotate(-1deg) translateY(10px); }
+    to   { opacity: 1; transform: translateX(-50%) rotate(-1deg) translateY(0); }
   }
 
 </style>
