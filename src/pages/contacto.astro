@@ -1,0 +1,140 @@
+---
+// Página Contacto
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contacto — Coni Argento">
+
+  <!-- DATOS IZQUIERDA -->
+  <div class="datos">
+    <a href="mailto:argentoconstanza@gmail.com" class="dato">
+      <div class="dato-icono">✉</div>
+      <span>argentoconstanza@gmail.com</span>
+    </a>
+    <a href="https://linkedin.com/in/constanza-argento/" target="_blank" class="dato">
+      <div class="dato-icono">in</div>
+      <span>linkedin/Constanza Argento</span>
+    </a>
+    <a href="https://www.behance.net/constanzargento" target="_blank" class="dato">
+      <div class="dato-icono">Be</div>
+      <span>behance/Constanza Argento</span>
+    </a>
+  </div>
+
+  <!-- FRASE ARRIBA DERECHA -->
+  <div class="frase-arriba">
+    esto<br>recién<br>empieza.
+  </div>
+
+  <!-- FRASE ABAJO IZQUIERDA -->
+  <div class="frase-abajo">y no<br>para.</div>
+
+  <!-- TEXTO EN LA HOJA -->
+  <div class="hoja-texto">
+    <p>¡Buenas, soy Coni!<br><br>
+    Gracias por pasar por acá y tomarte el tiempo de conocer mi trabajo.<br><br>
+    Siempre estoy abierta a nuevos proyectos, locuras creativas y colaboraciones con buena onda.<br><br>
+    El mejor momento para empezar algo nuevo es ahora.<br><br>
+    ¿Arrancamos? ✦</p>
+  </div>
+
+  <!-- IMAGEN DEL SOBRE -->
+  <div class="sobre-wrap">
+    <img src="/sobre.png" alt="sobre" class="sobre-img" />
+  </div>
+
+</Layout>
+
+<style>
+  /* DATOS IZQUIERDA */
+  .datos {
+    position: fixed;
+    top: 10rem;
+    left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    z-index: 10;
+  }
+
+  .dato {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--negro);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .dato:hover { opacity: 0.6; }
+
+  .dato-icono {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--negro);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  /* FRASE ARRIBA DERECHA */
+  .frase-arriba {
+    position: fixed;
+    right: 3rem;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    text-align: right;
+    letter-spacing: -0.02em;
+    z-index: 10;
+  }
+
+  /* FRASE ABAJO IZQUIERDA */
+  .frase-abajo {
+    position: fixed;
+    bottom: 2rem;
+    left: 3rem;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    z-index: 10;
+  }
+
+  /* SOBRE — sube desde abajo */
+  .sobre-wrap {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    animation: subirSobre 3s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  }
+
+  @keyframes subirSobre {
+    from { bottom: -500px; }
+    to   { bottom: -100px; }
+  }
+
+  .sobre-img {
+    width: 1000px;
+    display: block;
+  }
+
+  .hoja-texto {
+    position: fixed;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1deg);
+    width: 400px;
+    z-index: 25;
+    font-family: 'Miniver', serif;
+    font-size: 1.3rem;
+    color: #333;
+    text-align: left;
+  }
+
+</style>
