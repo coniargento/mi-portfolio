@@ -1,21 +1,17 @@
 ---
-// Página Sobre mí — línea de tiempo con carrusel
 import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Sobre mí — Coni Argento">
 
-  <!-- HEADER -->
   <div class="header">
     <div class="vol">VOL. 01 — MI HISTORIA</div>
     <h2 class="titulo">MI CAMINO</h2>
     <p class="subtitulo">De dónde vengo y a dónde voy</p>
   </div>
 
-  <!-- LÍNEA DE TIEMPO -->
   <div class="timeline">
-
-    <!-- ITEM 1 — carrusel izquierda, texto derecha -->
     <div class="tl-item">
       <div class="tl-lado-foto">
         <div class="tl-carrusel" data-actual="0">
@@ -37,18 +33,17 @@ import Layout from '../layouts/Layout.astro';
       <div class="tl-lado-texto">
         <div class="tl-anio">2003</div>
         <div class="tl-label">EL COMIENZO</div>
-        <div class="tl-titulo">Todo empieza acá</div>
-        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        <div class="tl-titulo">TODO EMPIEZA ACÁ</div>
+        <p class="tl-desc">Nací un 26 de junio de 2003 <3</p>
       </div>
     </div>
 
-    <!-- ITEM 2 — texto izquierda, carrusel derecha -->
     <div class="tl-item">
       <div class="tl-lado-texto">
-        <div class="tl-anio">2016-2020</div>
-        <div class="tl-label">SECUNDARIO</div>
-        <div class="tl-titulo">EN ARTES VISUALES</div>
-        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        <div class="tl-anio">DE NIÑA</div>
+        <div class="tl-label">la evidencia</div>
+        <div class="tl-titulo">YA SE VEÍA</div>
+        <p class="tl-desc">Desde que soy chica que siempre me gusto y realicé actividades relacionadas a lo creativo. Fui a varios talleres de arte, costura, siempre pintaba, dibujaba, entre otras cosas.</p>
       </div>
       <div class="tl-punto"><div class="tl-circulo"></div></div>
       <div class="tl-lado-foto">
@@ -68,7 +63,57 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- ITEM 3 — carrusel izquierda, texto derecha -->
+    <div class="tl-item">
+      <div class="tl-lado-texto">
+        <div class="tl-anio">2016-2020</div>
+        <div class="tl-label">SECUNDARIO</div>
+        <div class="tl-titulo">EN ARTES VISUALES</div>
+        <p class="tl-desc">Cuando termine el primario tuve que decidir donde seguir estudiando, al colegio primario donde yo iba tenía un secundario orientado en economía y no hay nada que me aburra más que los números. Y justo mi mamá había escuchado de un secundario orientado en las artes visuales así que sin pensarlo fui ahí. A lo largo de los 5 años tuve un montón de materias que me ayudaron a explorar y desarrollar mi creatividad: taller de artes plasticas, teatro, música, lenguajes artísticos combinados, producción artística y gestión cultural, entre otras.  </p>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🎨</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💻</span><span>Foto 2</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-lado-foto">
+        <div class="tl-carrusel" data-actual="0">
+          <div class="tl-slides-wrap">
+            <div class="tl-slides">
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">📚</span><span>Foto 1</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">🏫</span><span>Foto 2</span></div></div>
+              <div class="tl-slide"><div class="tl-slide-ph"><span class="emoji">💡</span><span>Foto 3</span></div></div>
+            </div>
+          </div>
+          <div class="tl-controles">
+            <button class="tl-btn" onclick="mover(this,-1)">←</button>
+            <div class="tl-dots"><div class="tl-dot activo"></div><div class="tl-dot"></div><div class="tl-dot"></div></div>
+            <button class="tl-btn" onclick="mover(this,1)">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="tl-punto"><div class="tl-circulo"></div></div>
+      <div class="tl-lado-texto">
+        <div class="tl-anio">2019</div>
+        <div class="tl-label">HACKATON</div>
+        <div class="tl-titulo">CONOZCO LA FACULTAD</div>
+        <p class="tl-desc">Cuando estaba en 4to año del secundario nos ofrecen de participar de la hackaton de la facultad y la idea me re copo, así que con mis amigos nos anotamos. La experiencia me encantó y terminé ganando el 2do puesto, es así como conozco a la facultad y más importante: LA CARRERA. </p>
+      </div>
+    </div>
+
     <div class="tl-item">
       <div class="tl-lado-foto">
         <div class="tl-carrusel" data-actual="0">
@@ -91,17 +136,16 @@ import Layout from '../layouts/Layout.astro';
         <div class="tl-anio">2021-2026</div>
         <div class="tl-label">UNIVERSIDAD MAIMONIDES</div>
         <div class="tl-titulo">Licenciatura en tecnología Multimedial</div>
-        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        <p class="tl-desc">El resto es historia.</p>
       </div>
     </div>
 
-    <!-- ITEM 4 — texto izquierda, carrusel derecha -->
     <div class="tl-item">
       <div class="tl-lado-texto">
         <div class="tl-anio">2022-2024</div>
-        <div class="tl-label">FREELANCER EN REDES Y DISEÑO</div>
-        <div class="tl-titulo">Nace mi agencia creativa</div>
-        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        <div class="tl-label">FREELANCER</div>
+        <div class="tl-titulo">PRIMEROS LABUROS</div>
+        <p class="tl-desc">Desde mi 2do año de la facultad empece a trabajar de forma freelance con clientes que me iban contactando para trabajos en diseño y redes sociales</p>
       </div>
       <div class="tl-punto"><div class="tl-circulo"></div></div>
       <div class="tl-lado-foto">
@@ -121,13 +165,12 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- ITEM 5 — texto izquierda, carrusel derecha -->
     <div class="tl-item">
         <div class="tl-lado-texto">
-          <div class="tl-anio">2023</div>
+          <div class="tl-anio">2022-2023</div>
           <div class="tl-label">MARCA DE ROPA DEPORTIVA</div>
-          <div class="tl-titulo">Nace mi agencia creativa</div>
-          <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+          <div class="tl-titulo">DATO DE COLOR</div>
+          <p class="tl-desc">En el medio de estudiar una carrera, trabajar freelance, entrenar y ser una persona que duerme, tuve 2 marcas de ropa deportiva que yo me encargue del diseño y gestión del proyecto pero no tuvieron desarrollo por la falta de tiempo, pero fueron experiencias de las cuales aprendi mucho :)</p>
         </div>
         <div class="tl-punto"><div class="tl-circulo"></div></div>
         <div class="tl-lado-foto">
@@ -151,9 +194,9 @@ import Layout from '../layouts/Layout.astro';
     <div class="tl-item">
         <div class="tl-lado-texto">
           <div class="tl-anio">2025</div>
-          <div class="tl-label">MI AGENCIA CREATIVA</div>
-          <div class="tl-titulo">Nace mi agencia creativa</div>
-          <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+          <div class="tl-label">EMPEZANDO MI EMPRESA</div>
+          <div class="tl-titulo">NACE MI AGENCIA CREATIVA</div>
+          <p class="tl-desc">El año pasado me asocie con mi mejor amiga, estudiante de diseño gráfico en FADU, para crear nuestra propia agencia creativa donde desarrollamos marcas nuevas, manejamos redes sociales, creamos contenido creativo, armamos estrategias digitales y tomamos muuuchoooo café!</p>
         </div>
         <div class="tl-punto"><div class="tl-circulo"></div></div>
         <div class="tl-lado-foto">
@@ -194,13 +237,15 @@ import Layout from '../layouts/Layout.astro';
       <div class="tl-lado-texto">
         <div class="tl-anio">HOY</div>
         <div class="tl-label">EL FUTURO</div>
-        <div class="tl-titulo">A dónde voy</div>
-        <p class="tl-desc">Lorem ipsum dolor sit amet. Reemplazá este texto con tu historia.</p>
+        <div class="tl-titulo">A DÓNDE VOY</div>
+        <p class="tl-desc">Hoy en día mi próximo objetivo es recibirme y hacer seguir creciendo mi empresa <3 </p>
       </div>
     </div>
 
   </div>
 
+  <Footer />
+  
 </Layout>
 
 <style>

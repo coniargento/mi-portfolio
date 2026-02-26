@@ -1,11 +1,10 @@
 ---
-// Página Contacto
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Contacto — Coni Argento">
 
-  <!-- DATOS IZQUIERDA -->
+  <!-- mis datos de contacto a la izquierda -->
   <div class="datos">
     <a href="mailto:argentoconstanza@gmail.com" class="dato">
       <div class="dato-icono">✉</div>
@@ -21,15 +20,13 @@ import Layout from '../layouts/Layout.astro';
     </a>
   </div>
 
-  <!-- FRASE ARRIBA DERECHA -->
   <div class="frase-arriba">
     esto<br>recién<br>empieza.
   </div>
 
-  <!-- FRASE ABAJO IZQUIERDA -->
   <div class="frase-abajo">y no<br>para.</div>
 
-  <!-- TEXTO EN LA HOJA -->
+  <!-- la "carta" -->
   <div class="hoja-texto">
     <p>¡Buenas, soy Coni!<br><br>
     Gracias por pasar por acá y tomarte el tiempo de conocer mi trabajo.<br><br>
@@ -38,7 +35,6 @@ import Layout from '../layouts/Layout.astro';
     ¿Arrancamos? ✦</p>
   </div>
 
-  <!-- IMAGEN DEL SOBRE -->
   <div class="sobre-wrap">
     <img src="/sobre.png" alt="sobre" class="sobre-img" />
   </div>
@@ -46,7 +42,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* DATOS IZQUIERDA */
   .datos {
     position: fixed;
     top: 10rem;
@@ -80,7 +75,6 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 600;
   }
 
-  /* FRASE ARRIBA DERECHA */
   .frase-arriba {
     position: fixed;
     right: 3rem;
@@ -91,8 +85,7 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: -0.02em;
     z-index: 10;
   }
-
-  /* FRASE ABAJO IZQUIERDA */
+  
   .frase-abajo {
     position: fixed;
     bottom: 2rem;
@@ -104,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
     z-index: 10;
   }
 
-  /* SOBRE — sube desde abajo */
+  /* animacion que sube el sobre */
   .sobre-wrap {
     position: fixed;
     bottom: -100px;
