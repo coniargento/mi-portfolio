@@ -137,4 +137,60 @@ import Layout from '../layouts/Layout.astro';
     to   { opacity: 1; transform: translateX(-50%) rotate(-1deg) translateY(0); }
   }
 
+  /* ============================
+     RESPONSIVE
+  ============================= */
+  @media (max-width: 768px) {
+
+  /* Datos arriba */
+  .datos {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 1.5rem;
+  }
+
+  /* Frase arriba */
+  .frase-arriba {
+    position: relative;
+    right: auto;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 3rem);
+    padding: 0 1.5rem;
+  }
+
+  /* Frase abajo se esconde */
+  .frase-abajo { display: none; }
+
+  /* Contenedor del sobre — relativo para que el texto se pueda superponer */
+  .sobre-wrap {
+      position: relative !important;
+      bottom: auto !important;
+      left: auto !important;
+      transform: none !important;
+      animation: none !important;
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .sobre-img {
+      width: 100% !important;
+      max-width: 500px !important;
+    }
+
+  /* Texto encima del sobre */
+  .hoja-texto {
+      position: fixed;
+      top: 48%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      width: 60%;
+      font-size: 0.6rem;
+      line-height: 1;
+      opacity: 1;
+      animation: none;
+      z-index: 30;
+    }
+}
 </style>
